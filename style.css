@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+:root {
+    --perfume-font: "Montserrat", sans-serif;
+    --heading-font: "Fraunces", sans-serif;
+
+}
+.montserrat-fontOne {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 body {
     display: flex;
     margin: 0;
@@ -22,6 +34,7 @@ body {
     align-items: center;
 
     min-height: 100vh;
+   
   
     
 }
@@ -32,6 +45,10 @@ body {
     background-color: white;
     width: 600px;
     height: 400px;
+    /* this tells the css to clip everything that goes outside the card, allowing image
+    to have rounded corners on one side, but the inner part of image being not rounded */
+    overflow: hidden;
+    border-radius: 10px;
     
     
 
@@ -44,18 +61,81 @@ body {
     display: flex;
     flex: 1;
     
+    
 }
 
 .cardimage img {
     height: 400px;
     width: auto;
     object-fit: cover;
+    
 }
 
 .cardcontent {
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 20px 20px;
+    padding: 25px 20px;
     
+    
+}
+
+.perfumetag {
+    font-family: var(--perfume-font);
+    font-weight: 500;
+    color:hsl(228, 12%, 48%);
+    font-size: 10px;
+    margin: 5px 5px;
+}
+
+.maintitle {
+    font-weight: 700;
+    color: hsl(212, 21%, 14%);
+    margin: 5px;
+
+}
+
+.maintext {
+    font-family: var(--perfume-font);
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+    font-size: 14px;
+    
+    margin: 5px 5px;
+}
+
+.priceamt {
+    display: flex;
+    margin: 10px 10px;
+}
+
+.priceamt h1 {
+    font-weight: 800;
+    margin: 5px;
+    color: hsl(158, 36%, 37%);
+
+}
+
+.priceamt p {
+    padding: 5px;
+    margin: 5px;
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.cardbutton {
+    display: flex;
+    justify-content: center;
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    color: white;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 14px 28px;
+    font-size: 12px;
+    margin: 5px;
+    gap: 10px;
+   
+
 }
